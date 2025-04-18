@@ -1,3 +1,46 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Paleta personalizada */
+@layer base {
+    :root {
+        --verde: #4caf50;
+        --azul: #3b82f6;
+        --beige: #f5f5dc;
+        --fondo: #fdfaf6;
+        --texto: #1a1a1a;
+    }
+
+    body {
+        background-color: #98e2ff; /* azul celeste */
+        color: var(--texto);
+        font-family: sans-serif;
+        }
+}
+
+/* Estilos opcionales para sliders */
+@layer components {
+    input[type="range"] {
+        accent-color: var(--verde);
+    }
+
+    h1, h2 {
+        color: #d1f5a7; /* verde claro */
+        -webkit-text-stroke: 1px rgb(7, 110, 55); /* Contorno negro */
+    }
+
+    .card {
+        background-color: var(--beige);
+        border-radius: 1rem; /* 2xl */
+        padding: 1rem; /* 4 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    }
+
+    .slider-label {
+        font-size: 0.875rem; /* text-sm */
+        color: var(--azul);
+        margin-bottom: 0.25rem; /* mb-1 */
+    }
+}
